@@ -1,0 +1,28 @@
+
+<h1> WELCOME TO ANGULAR!</h1>
+  Uppercase: {{"rvrjcce" | uppercase }}<br>
+  Lowercase: {{"HELLO WORLD" | lowercase}}<br>
+  Date: {{ today | date:'yMMMMEEEEhmsz'}}<br>
+  Date: {{today | date:'mediumDate'}}<br>
+  Date: {{today | date: 'shortTime'}}<br>
+  Number: {{3.1415927 | number:'2.1-5'}}<br>
+  Number: {{28 | number:'2.3'}}<br>
+  Currency: {{125.257 | currency:'USD':true: '1.2-2'}}<br>
+  Currency: {{2158.925 | currency}}<br>
+ 
+  PercentPipe: {{.8888 | percent: '2.1'}}<br>
+  SlicePipe: {{"hello world" | slice:0:9}}<br>
+
+<h1>Expressions</h1>
+Number:<br>
+{{5}}<hr>
+String:<br>
+{{'My String'}}<hr>
+Adding two strings together:<br>
+ {{'String1' + ' ' + 'String2'}}<hr>
+ Adding two numbers together:<br>
+ {{5+5}}<hr>
+Adding strings and numbers together:<br>
+{{5 + '+' + 5 + '='}}{{5+5}}<hr>
+ Comparing two numbers with each other:<br>
+ {{5===5}}<hr>
