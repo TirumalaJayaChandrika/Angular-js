@@ -1,14 +1,26 @@
 import { Component } from '@angular/core';
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './myhtml.component.html',
-  styleUrls: ['./app.component.css']
-})
-export class AppComponent {
-  title = 'pipes';
-  today : Date;
-  constructor(){
-    this.today = new Date;
-  }
-}
+ @Component({
+ selector: 'app-root',
+ template: `
+ <img [src]="myPic"/>
+ <br>
+ <button [disabled]="isEnabled">Click me</button><hr>
+ <button disabled="{!isEnabled}">Click me</button><br>
+ <p [ngClass]="className">This is cool stuff</p>
+ `,
+ styles: [` img {
+            height: 100px;
+            width: auto;
+            }
+ .myClass {
+ color: red;
+ font-size: 24px;
+ }
+ `]
+ })
+ export class AppComponent {
+ myPic: string = "../assets/istockphoto-517188688-612x612.jpg";
+ isEnabled: boolean = false;
+ className: string = "myClass";
+ }
